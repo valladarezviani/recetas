@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Recetario Delicioso</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">El Recetario Delicioso</h1>
+            <form class="search-bar" id="searchForm">
+                <input type="text" id="searchInput" placeholder="Buscar recetas..." oninput="filterRecipes()">
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <section id="recetas">
+            <h2>Recetas Destacadas</h2>
+            <div class="recipe-grid">
+                
+                <div class="recipe-card">
+                    <img src="img/ensalada mediterranea.webp" alt="Ensalada Mediterránea">
+                    <h3>Ensalada Mediterránea</h3>
+                    <p>Una deliciosa mezcla de verduras frescas y sabores del Mediterráneo.</p>
+                    <button class="recipe-details-btn" onclick="toggleDetails('details1')">Ver detalles</button>
+                    <div id="details1" class="recipe-details">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Tomates cherry</li>
+                            <li>Pepino</li>
+                            <li>Aceitunas negras</li>
+                            <li>Queso feta</li>
+                            <li>Aceite de oliva</li>
+                            <li>Vinagre balsámico</li>
+                        </ul>
+                        <h4>Pasos a seguir</h4>
+                        <ol>
+                            <li>Corta los tomates y el pepino.</li>
+                            <li>Mezcla con aceitunas y queso feta.</li>
+                            <li>Adereza con aceite y vinagre.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="recipe-card">
+                    <img src="img/pasta.jpg" alt="Pasta Carbonara">
+                    <h3>Pasta Carbonara</h3>
+                    <p>La clásica pasta italiana con queso y panceta.</p>
+                    <button class="recipe-details-btn" onclick="toggleDetails('details2')">Ver detalles</button>
+                    <div id="details2" class="recipe-details">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Pasta</li>
+                            <li>Huevos</li>
+                            <li>Queso parmesano</li>
+                            <li>Panceta</li>
+                            <li>Ajo</li>
+                            <li>Pimienta negra</li>
+                        </ul>
+                        <h4>Pasos a seguir</h4>
+                        <ol>
+                            <li>Cocina la pasta según las instrucciones.</li>
+                            <li>Fríe la panceta con ajo.</li>
+                            <li>Mezcla con huevo y queso.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="img/limon.jfif" alt="Tarta de Limón" width="200">
+                    <h3>Tarta de Limón</h3>
+                    <p>Un postre refrescante y ácido con base crujiente.</p>
+                    <button class="recipe-details-btn" onclick="toggleDetails('details3')">Ver detalles</button>
+                    <div id="details3" class="recipe-details">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Base de galleta</li>
+                            <li>Jugo de limón</li>
+                            <li>Azúcar</li>
+                            <li>Huevos</li>
+                            <li>Crema de leche</li>
+                        </ul>
+                        <h4>Pasos a seguir</h4>
+                        <ol>
+                            <li>Prepara la base de galleta.</li>
+                            <li>Mezcla jugo de limón con azúcar y huevos.</li>
+                            <li>Hornea y deja enfriar.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="img/brownie.jfif" alt="Brownies de Chocolate">
+                    <h3>Brownies de Chocolate</h3>
+                    <p>Deliciosos brownies con trozos de chocolate en cada bocado.</p>
+                    <button class="recipe-details-btn" onclick="toggleDetails('details5')">Ver detalles</button>
+                    <div id="details5" class="recipe-details">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Chocolate</li>
+                            <li>Mantequilla</li>
+                            <li>Azúcar</li>
+                            <li>Huevos</li>
+                            <li>Harina</li>
+                            <li>Nueces (opcional)</li>
+                        </ul>
+                        <h4>Pasos a seguir</h4>
+                        <ol>
+                            <li>Derrite el chocolate con mantequilla.</li>
+                            <li>Mezcla con azúcar y huevos.</li>
+                            <li>Agrega harina y hornea.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="img/smoothie.jfif" alt="Smoothie de Frutas">
+                    <h3>Smoothie de Frutas</h3>
+                    <p>Un batido fresco y saludable para empezar el día.</p>
+                    <button class="recipe-details-btn" onclick="toggleDetails('details6')">Ver detalles</button>
+                    <div id="details6" class="recipe-details">
+                        <h4>Ingredientes</h4>
+                        <ul>
+                            <li>Frutas frescas (fresas, plátano, mango)</li>
+                            <li>Yogur natural</li>
+                            <li>Miel</li>
+                            <li>Leche o agua</li>
+                        </ul>
+                        <h4>Pasos a seguir</h4>
+                        <ol>
+                            <li>Coloca las frutas en la licuadora.</li>
+                            <li>Agrega yogur, miel y leche.</li>
+                            <li>Licúa hasta obtener una mezcla suave.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recetario Viani. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
